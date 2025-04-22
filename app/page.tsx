@@ -1,29 +1,40 @@
 import "./page.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <header>
         <h1>Bem-vindo ao Lanche Express!</h1>
       </header>
 
-      <div className="container">
-        <section className="about">
-          <h2>Sobre Nós</h2>
-          <p>
-            O melhor delivery de lanches da cidade! Ingredientes frescos, sabor
-            incomparável e entrega rápida.
-          </p>
-          <p>Faça seu pedido e aproveite!</p>
-        </section>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12">
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src="https://files.menudino.com/cardapios/69388/logo.png"
+            alt="Imagem da empresa"
+            className="max-w-[350px] rounded-md shadow-lg"
+          />
+        </div>
 
-        <div className="btns">
-          <a href="#" className="order-btn">
-            Cardápio
-          </a>
-          <a href="#" className="order-btn">
-            Faça seu Pedido
-          </a>
+        <div className="w-full md:w-1/2 text-center">
+          <section className="about">
+            <h2 className="text-orange-500 text-3xl font-bold">Sobre Nós</h2>
+            <p className="text-lg mt-3">
+              O melhor delivery de lanches da cidade! Ingredientes frescos,
+              sabor incomparável e entrega rápida.
+            </p>
+            <p className="mt-2">Faça seu pedido e aproveite!</p>
+          </section>
+
+          <div className="btns flex flex-col md:flex-row gap-4 mt-6 mb-6">
+            <Link href="/cardapio" className="order-btn">
+              Cardápio
+            </Link>
+            <Link href="#" className="order-btn">
+              Faça seu Pedido
+            </Link>
+          </div>
         </div>
       </div>
 
