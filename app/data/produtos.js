@@ -8,9 +8,23 @@ const produtos = {
     },
     {
       nome: "X-Bacon",
-      img: "/images/xbacon.jpg",
+      img: "/images/bacon.jpg",
       ingredientes: ["Pão", "Carne", "Bacon", "Queijo", "Molho especial"],
       preco: "R$ 18,90",
+    },
+  ],
+  Poções: [
+    {
+      nome: "Batata frita simples",
+      img: "/images/batata.jpg",
+      ingredientes: ["Batata frita"],
+      preco: "R$ 9,90",
+    },
+    {
+      nome: "Batata frita recheada",
+      img: "/images/batata2.jpg",
+      ingredientes: ["Batata frita", "Calabresa", "Bacon", "Queijo", "Chedder"],
+      preco: "R$ 38,90",
     },
   ],
   bebidas: [
