@@ -8,6 +8,25 @@ export default function cardapio() {
   const [categoria, setCategoria] = useState("lanches");
   const [index, setIndex] = useState(0);
 
+  const [fade, setFade] = useState(true);
+
+  const changeItem = (direction: "prev" | "next") => {
+    setFade(false); // Inicia fade-out
+
+    setTimeout(() => {
+      setIndex(
+        direction === "prev"
+          ? index === 0
+            ? itens.length - 1
+            : index - 1
+          : index === itens.length - 1
+          ? 0
+          : index + 1
+      );
+      setFade(true); // Aplica fade-in após troca
+    }, 300);
+  };
+
   const itens = produtos[categoria];
 
   const prevItem = () => setIndex(index === 0 ? itens.length - 1 : index - 1);
@@ -42,13 +61,19 @@ export default function cardapio() {
           </button>
 
           <div className="flex flex-col items-center text-center transition-opacity duration-500">
-            <Image
-              src={itens[index].img}
-              alt={itens[index].nome}
-              width={200}
-              height={200}
-              className="rounded-md shadow-lg"
-            />
+            <div
+              className={`flex flex-col items-center text-center ${
+                fade ? "fade show" : "fade"
+              }`}
+            >
+              <Image
+                src={itens[index].img}
+                alt={itens[index].nome}
+                width={200}
+                height={200}
+                className="rounded-md shadow-lg"
+              />
+            </div>
             <h2 className="text-xl font-bold mt-2">{itens[index].nome}</h2>
             <ul className="mt-2 text-gray-600">
               {itens[index].ingredientes.map((ing, i) => (
