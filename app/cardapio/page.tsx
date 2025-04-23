@@ -4,7 +4,7 @@ import Image from "next/image";
 import "./cardapio.css";
 import produtos from "../data/produtos";
 
-export default function cardapio() {
+export default function Cardapio() {
   const [categoria, setCategoria] = useState("lanches");
   const [index, setIndex] = useState(0);
 
