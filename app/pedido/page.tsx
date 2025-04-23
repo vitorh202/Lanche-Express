@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { produtos, Produto } from "../data/produtos"
+import { produtos} from "../data/produtos"
 
 export default function Pedido() {
   const [quantidades, setQuantidades] = useState<Record<string, number>>({});
