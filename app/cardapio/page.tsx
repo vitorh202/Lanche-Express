@@ -95,7 +95,7 @@ export default function cardapio() {
           <p className="text-lg font-semibold">
             Já escolheu? Faça seu pedido agora!
           </p>
-          <button className="mt-4 bg-orange-500 text-white px-6 py-3 rounded-md text-lg font-bold hover:bg-orange-600">
+          <button className="mt-4 bg-orange-500 text-white px-6 py-3 rounded-md text-lg font-bold hover:bg-orange-600" onClick={() => window.location.href = "/pedido"}>
             Pedir Agora
           </button>
         </div>

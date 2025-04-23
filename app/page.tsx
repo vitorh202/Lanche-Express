@@ -8,7 +8,7 @@ export default function Home() {
         <h1>Bem-vindo ao Lanche Express!</h1>
       </header>
 
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12">
+      <div className="flex flex-col md:flex-row items-center justify-center flex-grow gap-8 mt-12">
         <div className="w-full md:w-1/2 flex justify-center">
           <img
             src="https://files.menudino.com/cardapios/69388/logo.png"
@@ -31,7 +31,7 @@ export default function Home() {
             <Link href="/cardapio" className="order-btn">
               Cardápio
             </Link>
-            <Link href="#" className="order-btn">
+            <Link href="/pedido" className="order-btn">
               Faça seu Pedido
             </Link>
           </div>
