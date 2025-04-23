@@ -1,4 +1,11 @@
-const produtos = {
+export type Produto = {
+  nome: string;
+  img: string;
+  ingredientes: string[];
+  preco: string;
+};
+
+export const produtos: Record<string, Produto[]> = {
   lanches: [
     {
       nome: "X-Burger",

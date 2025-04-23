@@ -2,13 +2,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import "./cardapio.css";
-import produtos from "../data/produtos";
+import { produtos, Produto } from "../data/produtos";
 
 export default function Cardapio() {
   const [categoria, setCategoria] = useState("lanches");
   const [index, setIndex] = useState(0);
 
-  const itens = produtos[categoria];
+  const itens: Produto[] = produtos[categoria];
 
   const prevItem = () => setIndex(index === 0 ? itens.length - 1 : index - 1);
   const nextItem = () => setIndex(index === itens.length - 1 ? 0 : index + 1);

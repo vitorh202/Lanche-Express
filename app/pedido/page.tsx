@@ -1,15 +1,15 @@
 'use client'
 
 import { useState } from "react";
-import produtos from "../data/produtos";
+import { produtos, Produto } from "../data/produtos"
 
 export default function Pedido() {
-  const [quantidades, setQuantidades] = useState({});
+  const [quantidades, setQuantidades] = useState<Record<string, number>>({});
   const [nome, setNome] = useState("");
   const [endereco, setEndereco] = useState("");
   const [pagamento, setPagamento] = useState("");
 
-  const handleChangeQuantidade = (categoria, index, valor) => {
+  const handleChangeQuantidade = (categoria: keyof typeof produtos, index: number, valor: string) => {
     setQuantidades({
       ...quantidades,
       [`${categoria}-${index}`]: Number(valor),
