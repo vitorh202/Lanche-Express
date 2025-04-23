@@ -72,7 +72,7 @@ export default function Pedido() {
                 <input
                   type="number"
                   min="0"
-                  value={quantidades[`${categoria}-${index}`] || 0}
+                  value={quantidades[`${categoria}-${index}`]}
                   onChange={(e) => handleChangeQuantidade(categoria, index, e.target.value)}
                   className="w-16 text-center border rounded ml-4"
                 />
